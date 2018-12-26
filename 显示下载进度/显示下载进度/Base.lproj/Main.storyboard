@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uqV-qP-aG2" customClass="ZPProgressView">
+                                <rect key="frame" x="97.5" y="100" width="180" height="180"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zX-15-GOt">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="6Yv-dB-Fhg"/>
+                                    <constraint firstItem="4zX-15-GOt" firstAttribute="top" secondItem="uqV-qP-aG2" secondAttribute="top" id="L7M-cN-HAS"/>
+                                    <constraint firstAttribute="trailing" secondItem="4zX-15-GOt" secondAttribute="trailing" id="PQx-sP-zTy"/>
+                                    <constraint firstItem="4zX-15-GOt" firstAttribute="leading" secondItem="uqV-qP-aG2" secondAttribute="leading" id="jUj-oz-E2a"/>
+                                    <constraint firstAttribute="width" constant="180" id="u6b-67-wog"/>
+                                    <constraint firstAttribute="bottom" secondItem="4zX-15-GOt" secondAttribute="bottom" id="zTd-aZ-xA3"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="z5O-FR-UFh">
+                                <rect key="frame" x="65.5" y="348" width="244" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="r0s-Kd-2PW"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="progressChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="CIE-hT-x5V"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="z5O-FR-UFh" firstAttribute="top" secondItem="uqV-qP-aG2" secondAttribute="bottom" constant="68" id="HOE-bi-P0q"/>
+                            <constraint firstItem="uqV-qP-aG2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="IeQ-Vu-ENy"/>
+                            <constraint firstItem="uqV-qP-aG2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ri4-da-zfo"/>
+                            <constraint firstItem="z5O-FR-UFh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tfc-V4-bHX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="4zX-15-GOt" id="0cV-Wl-cA8"/>
+                        <outlet property="progressView" destination="uqV-qP-aG2" id="HQo-2R-F2o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10" y="122"/>
+        </scene>
+    </scenes>
+</document>
