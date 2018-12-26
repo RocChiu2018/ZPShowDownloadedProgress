@@ -1,0 +1,2 @@
+# ZPShowDownloadedProgress
+本Demo主要介绍拖动UISlider控件的时候UILabel控件里面如何显示百分比数字的。
